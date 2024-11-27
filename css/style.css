@@ -219,6 +219,90 @@
       font-weight: bold;
   }
 
+  /* Contact Page */
+  .contact-page {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+
+  .contact-page h1,
+  .contact-page h2 {
+      color: #333;
+      margin-bottom: 20px;
+  }
+
+  .contact-form,
+  .collaboration-form {
+      margin-bottom: 30px;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .collaboration-form input,
+  .collaboration-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+  }
+
+  .contact-form button,
+  .collaboration-form button {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+
+  .contact-form button:hover,
+  .collaboration-form button:hover {
+      background-color: #555;
+  }
+
+  .contact-details {
+      margin-top: 20px;
+  }
+
+  .contact-details p {
+      margin-bottom: 10px;
+  }
+
+  iframe {
+      margin-top: 20px;
+      border-radius: 10px;
+  }
+
+  .business-hours ul {
+      list-style: none;
+      padding: 0;
+  }
+
+  .business-hours li {
+      margin-bottom: 10px;
+  }
+
+  .social-media ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 10px;
+  }
+
+  .social-media a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+  }
+
+  .social-media a:hover {
+      text-decoration: underline;
+  }
+
+
   /* Responsive Styles */
   @media screen and (max-width: 768px) {
       .nav {
@@ -274,11 +358,70 @@
           /* Adjust to fit two columns on smaller screens */
       }
 
+      .contact-page {
+          padding: 20px;
+          /* Reducir padding para dispositivos más pequeños */
+      }
+
+      .contact-form input,
+      .contact-form textarea,
+      .collaboration-form input,
+      .collaboration-form textarea {
+          padding: 8px;
+          /* Reducir padding en campos de formulario */
+      }
+
+      .contact-details,
+      .business-hours ul {
+          text-align: center;
+          /* Centrar textos para mejor lectura */
+      }
+
+      .social-media ul {
+          flex-direction: column;
+          /* Cambiar de fila a columna */
+          align-items: center;
+          /* Centrar los elementos */
+          gap: 5px;
+          /* Reducir espacio entre elementos */
+      }
+
+      iframe {
+          height: 250px;
+          /* Ajustar altura del mapa */
+      }
+
   }
 
   @media screen and (max-width: 480px) {
       .review {
           flex: 0 0 100%;
           /* Stack reviews vertically on very small screens */
+      }
+
+      .contact-form input,
+      .contact-form textarea,
+      .collaboration-form input,
+      .collaboration-form textarea {
+          font-size: 14px;
+          /* Reducir tamaño de fuente */
+      }
+
+      .contact-page h1,
+      .contact-page h2 {
+          font-size: 20px;
+          /* Reducir tamaño de los títulos */
+      }
+
+      iframe {
+          width: 100%;
+          /* Asegurar que el mapa ocupe todo el ancho disponible */
+          height: 200px;
+          /* Ajustar la altura para pantallas pequeñas */
+      }
+
+      .social-media ul {
+          gap: 10px;
+          /* Espaciado más uniforme */
       }
   }
