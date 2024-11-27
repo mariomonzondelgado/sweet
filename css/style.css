@@ -3,6 +3,10 @@
       margin: 0;
       font-family: Arial, sans-serif;
       line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      /* La página debe llenar al menos toda la altura del viewport */
   }
 
   .header {
@@ -48,11 +52,16 @@
       margin: 3px 0;
   }
 
+  main {
+      flex: 1;
+      /* El contenido principal ocupa todo el espacio disponible entre el header y el footer */
+  }
+
   footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px 20px;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 20px;
   }
 
   /* Two Column Section */
@@ -126,51 +135,52 @@
   }
 
   /* Customer Reviews Section */
-.customer-reviews {
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
+  .customer-reviews {
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+      text-align: center;
   }
-  
+
   .customer-reviews h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #333;
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #333;
   }
-  
+
   .reviews-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
   }
-  
+
   .review {
-    flex: 0 0 23%; /* Adjust to fit four columns */
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
+      flex: 0 0 23%;
+      /* Adjust to fit four columns */
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
   }
-  
+
   .review img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 15px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 15px;
   }
-  
+
   .review p {
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #555;
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #555;
   }
-  
+
   .review h4 {
-    font-size: 14px;
-    font-weight: bold;
-    color: #333;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
   }
 
   /* About Page Main Section */
@@ -260,13 +270,15 @@
       }
 
       .review {
-        flex: 0 0 45%; /* Adjust to fit two columns on smaller screens */
+          flex: 0 0 45%;
+          /* Adjust to fit two columns on smaller screens */
       }
 
   }
 
   @media screen and (max-width: 480px) {
-    .review {
-      flex: 0 0 100%; /* Stack reviews vertically on very small screens */
-    }
+      .review {
+          flex: 0 0 100%;
+          /* Stack reviews vertically on very small screens */
+      }
   }
