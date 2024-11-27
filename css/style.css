@@ -1,0 +1,167 @@
+  /* General Styles */
+  body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+  }
+
+  .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+  }
+
+  .logo img {
+      height: 40px;
+  }
+
+  .nav {
+      display: flex;
+  }
+
+  .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+  }
+
+  .nav-links li a {
+      color: white;
+      text-decoration: none;
+  }
+
+  .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+  }
+
+  .hamburger .bar {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 3px 0;
+  }
+
+  /* Two Column Section */
+  .two-column-section {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      /* General padding for top and bottom */
+      padding-left: 40px;
+      /* Left padding for separation */
+      padding-right: 40px;
+      /* Right padding for separation */
+      gap: 20px;
+  }
+
+  .column.left {
+      flex: 0 0 33%;
+  }
+
+  .column.left img {
+      width: 100%;
+      border-radius: 10px;
+  }
+
+  .column.right {
+      flex: 1;
+  }
+
+  .column.right h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+  }
+
+  .column.right p {
+      margin-bottom: 15px;
+      text-align: justify;
+  }
+
+  /* Three Column Section */
+  .three-column-section {
+      display: flex;
+      justify-content: space-between;
+      /* Space between columns */
+      align-items: center;
+      /* Center vertically */
+      flex-wrap: wrap;
+      /* Allow wrapping for responsiveness */
+      padding: 20px;
+      gap: 20px;
+      /* Gap between columns */
+  }
+
+  .three-column-section .column {
+      flex: 0 0 30%;
+      /* Each column takes up 30% of the width */
+      text-align: center;
+      /* Center the images horizontally */
+  }
+
+  .three-column-section .column img {
+      width: 100%;
+      /* Ensure the image fills the column */
+      border-radius: 10px;
+      /* Rounded corners for better aesthetics */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      /* Subtle shadow for depth */
+  }
+
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+      .nav {
+          display: none;
+          flex-direction: column;
+          background-color: #333;
+          position: absolute;
+          top: 60px;
+          right: 20px;
+          width: 200px;
+          border-radius: 5px;
+      }
+
+      .nav.active {
+          display: flex;
+      }
+
+      .nav-links {
+          flex-direction: column;
+          gap: 10px;
+          padding: 10px;
+      }
+
+      .hamburger {
+          display: flex;
+      }
+
+      .two-column-section {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding-left: 20px;
+          /* Reduce padding on smaller screens */
+          padding-right: 20px;
+          /* Reduce padding on smaller screens */
+      }
+
+      .column.left,
+      .column.right {
+          flex: 1;
+      }
+
+      .column.left img {
+          max-width: 80%;
+      }
+
+      .column.right h2 {
+          margin-top: 20px;
+      }
+
+  }
