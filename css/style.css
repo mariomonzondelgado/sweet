@@ -54,9 +54,9 @@
       flex-wrap: wrap;
       padding: 20px;
       /* General padding for top and bottom */
-      padding-left: 40px;
+      padding-left: 10%;
       /* Left padding for separation */
-      padding-right: 40px;
+      padding-right: 10%;
       /* Right padding for separation */
       gap: 20px;
   }
@@ -94,6 +94,10 @@
       flex-wrap: wrap;
       /* Allow wrapping for responsiveness */
       padding: 20px;
+      padding-left: 10%;
+      /* Left padding for separation */
+      padding-right: 10%;
+      /* Right padding for separation */
       gap: 20px;
       /* Gap between columns */
   }
